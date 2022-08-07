@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>แบบฟอร์มจองทัวร์</title>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+</head>
+<body>
+    <form action="">
+    <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+        
+        <label for="name">ชื่อ-สกุล:</label><br>
+        <input type="text" id="name" placeholder="กอรกชื่อ-สกุล" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" required><br>
+
+        <label for="tel">โทรศัพท์:</label><br>
+        <input type="tel" value="+66" required><br>
+
+        <label for="address">ที่อยู่:</label><br>
+        <textarea id="address" rows="4" cols="50"></textarea><br>
+
+        <label for="pos">รหัสไปรษณีย์:</label><br>
+        <input type="text" pattern="[0-9]{5}"><br>
+
+        <label for="pic">รูปผู้รับจอง:</label>
+        <input type="file">
+    </fieldset><br>
+
+    <fieldset>
+        <legend>ข้อมูลเข้าสู่ระบบ</legend>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" pattern="[0-9a-zA-Z]*8"><br>
+        <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" pattern="[0-9a-zA-Z].{8,}"><br>
+        <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i><br>
+
+    </fieldset><br>
+
+    <fieldset>
+        
+        <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+
+        <label for="package">แพ็คเกจทัวร์:</label>
+        <select>
+            <option>--select--</option>
+            <option>เกาหลีเหนือ</option>
+            <option>รัสเซีย</option>
+            <option>ปากีสถาน</option>
+            <option>เมียนม่า</option>
+            <option>จีน</option>
+        </select><br>
+        <label for="date">วันที่ออกเดินทาง:</label>
+        <input type="date" id="date"><br>
+
+        <label for="people">จำนวนผู้เดินทาง:</label>
+        <input type="number" max="10" min="1" required><br>
+
+        <label for="type">เน้นการท่องเที่ยวแบบใด?</label><br>
+        <input type="checkbox" id="traveltype1" value="ชอปปิ้ง">ชอปปิ้ง<br>
+        <input type="checkbox" id="traveltype2" value="ธรรมชาติ">ธรรมชาติ<br>
+        <input type="checkbox" id="traveltype3" value="ทะเล">ทะเล<br>
+    </fieldset>
+
+    <b>ยอมรับเงื่อนไขและข้อตกลง</b>
+    <input type="radio" id="terms1" name="terms" value="agree" checked>
+    <label for="agree">I agree</label>
+    <input type="radio" id="terms2" name="terms" value="disagree">
+    <label for="disagree">I disagree</label>
+
+    <input type="submit" value="จอง">
+</form>
+</body>
+</html>
